@@ -1,18 +1,20 @@
 </DOCTYPE>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head>
-    <meta charset="UTF-8"/>
-    <title>Coding Events</title>
-</head>
-<boby>
+<head th:replace="fragments :: head"></head>
+<body class="container">
 
-    <h1>All Events</h1>
+<header th:replace="fragments :: header"></header>
 
-    <ul>
-        <th:block th:each="events : ${events}">
-            <li th:text="${events}"></li>
-        </th:block>
-    </ul>
+<table class="table table-striped">
+   <thead>
+   <tr>
+       <th>Name</th>
+   </tr>
+   </thead>
+        <tr th:each="events : ${events}">
+            <td th:text="${events}"></td>
+        </tr>
+</table>
 
-</boby>
+</body>
 </html>
