@@ -1,0 +1,18 @@
+</DOCTYPE>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Coding Events</title>
+</head>
+<boby>
+
+    <h1>All Events</h1>
+
+    <ul>
+        <th:block th:each="events : ${events}">
+            <li th:text="${events}"></li>
+        </th:block>
+    </ul>
+
+</boby>
+</html>
